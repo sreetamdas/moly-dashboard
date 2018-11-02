@@ -20,6 +20,10 @@ export default class Tables extends React.Component {
 	};
 
 	render() {
-		return <React.Fragment />;
+		return (
+			<React.Fragment>
+				<table className="table" />
+			</React.Fragment>
+		);
 	}
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import Add from "./Add";
+import Tables from "./Tables";
 
 export default class Dashboard extends React.Component {
 	render() {
@@ -7,6 +8,7 @@ export default class Dashboard extends React.Component {
 			<React.Fragment>
 				<div>Dashboard</div>
 				<Add />
+				<Tables />
 			</React.Fragment>
 		);
 	}
