@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class Add extends React.Component {
+export default class CICD extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
