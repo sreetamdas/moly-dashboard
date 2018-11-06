@@ -1,6 +1,17 @@
 import React from "react";
+import axios from "axios";
 
 export default class CICD extends React.Component {
+	getFromServer = () => {
+		axios
+			.get("http://localhost:5000/")
+			.then(response => {
+				console.log({ response });
+			})
+			.catch(error => {
+				console.log({ error });
+			});
+	};
 	render() {
 		return (
 			<React.Fragment>
