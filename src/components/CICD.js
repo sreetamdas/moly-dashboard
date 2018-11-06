@@ -2,6 +2,14 @@ import React from "react";
 import axios from "axios";
 
 export default class CICD extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			html: ""
+		};
+	}
+
 	getFromServer = () => {
 		axios
 			.get("http://localhost:5000/")
