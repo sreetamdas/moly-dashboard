@@ -20,6 +20,23 @@ export default class CICD extends React.Component {
 				console.log({ error });
 			});
 	};
+
+	putToServer = (e, html) => {
+		e.preventDefault();
+
+		this.setState({
+			html: html
+		});
+
+		axios
+			.get("http://localhost:5000/update/")
+			.then(response => {
+				console.log({ response });
+			})
+			.catch(error => {
+				console.log({ error });
+			});
+	};
 	render() {
 		return (
 			<React.Fragment>

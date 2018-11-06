@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import CICD from "./CICD";
 import Pods from "./Pods";
-import Nav from "./Nav";
 
 export default class Dashboard extends React.Component {
 	render() {
