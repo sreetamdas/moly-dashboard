@@ -6,6 +6,8 @@ export default class Pods extends React.Component {
 		super(props);
 
 		this.renderTable = this.renderTable.bind(this);
+		this.fetchData = this.fetchData.bind(this);
+
 		this.state = {
 			active: true,
 			data: {
@@ -21,8 +23,27 @@ export default class Pods extends React.Component {
 	}
 
 	componentDidMount = () => {
+		// setinterval(1000)
 		// this.fetchData();
+
+		setInterval(this.fetchData, 1000);
 	};
+
+	fetchData = () => {
+		// const data = null;
+		axios
+			.get(`http://localhost:5000/dashboard/`)
+			.then(response => {
+				console.log({ response });
+				this.setState({
+					data: response
+				});
+			})
+			.catch(error => {
+				console.log({ error });
+			});
+	};
+
 	renderTable = () => {
 		const data = { ...this.state.data };
 		console.log({ data });
@@ -58,7 +79,15 @@ export default class Pods extends React.Component {
 
 	killNode = (e, node) => {
 		e.preventDefault();
-		console.log(node);
+		console.log("delete", node);
+		axios
+			.get(`http://localhost:5000/dashboard/delete/${node}`)
+			.then(response => {
+				console.log({ response });
+			})
+			.catch(error => {
+				console.log({ error });
+			});
 	};
 	fetchData = () => {
 		axios

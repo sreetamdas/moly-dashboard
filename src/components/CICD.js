@@ -12,7 +12,7 @@ export default class CICD extends React.Component {
 
 	getFromServer = () => {
 		axios
-			.get("http://localhost:5000/")
+			.get("http://localhost:5000")
 			.then(response => {
 				console.log({ response });
 			})
