@@ -29,6 +29,10 @@ export default class Pods extends React.Component {
 		setInterval(this.fetchData, 1000);
 	};
 
+	componentWillUnmount() {
+		clearInterval(this.fetchData);
+	}
+
 	fetchData = () => {
 		// const data = null;
 		axios
