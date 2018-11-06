@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-export default class Tables extends React.Component {
+export default class Pods extends React.Component {
 	constructor(props) {
 		super(props);
 
